@@ -1,0 +1,200 @@
+@use "./utilities/global" as *;
+
+@include setup;
+
+body {
+  font-family: $font-plus-jakarta;
+  background-color: color(light-cream);
+  padding: rem(16px) 0 rem(32px);
+}
+
+.header,
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-inline: rem(16px);
+}
+
+.header {
+  margin-bottom: rem(32px);
+}
+
+.logo {
+  width: rem(48px);
+  height: rem(48px);
+}
+
+.button {
+  @include setFont(rem(14px), 28px, 700);
+  background-color: color(black);
+  color: color(light-cream);
+  padding: em(8px, 14px) em(27px, 14px);
+  border: 0;
+  border-radius: 28px;
+  cursor: pointer;
+}
+
+.button--pink {
+  background-color: color(pink);
+}
+
+.section-top {
+  text-align: center;
+  margin-inline: rem(16px);
+}
+
+.section-top__heading {
+  @include setFont(rem(36px), 45px, 700);
+  margin-bottom: em(16px, 36px);
+  color: color(black);
+}
+
+.section-top__paragraph {
+  @include setFont(rem(16px), 26px, 500);
+  margin-bottom: em(32px, 16px);
+  color: color(medium-brown);
+  margin-inline: rem(29px);
+}
+
+.competencies {
+  margin-inline: rem(16px);
+  margin-bottom: rem(100px);
+  display: grid;
+  grid-template: repeat(5, min-content) / repeat(2, 1fr);
+  grid-template-areas:
+    "graphic-design graphic-design"
+    "ui-ux apps"
+    "illustrations illustrations"
+    "photography photography"
+    "motion-graphics motion-graphics";
+  gap: 25px 24px;
+}
+
+$grid-areas: (
+  graphic-design color(galactic-blue) rem(364px),
+  ui-ux color(summer-yellow) rem(182px),
+  apps color(pink) rem(182px),
+  illustrations color(light-red) rem(158px),
+  photography color(cyan) rem(182px),
+  motion-graphics color(dark-purple) rem(182px)
+);
+
+%grid-item {
+  width: 100%;
+  background: {
+    repeat: no-repeat;
+    position: top rem(24px) right rem(24px);
+  }
+  color: white;
+  @include setFont(rem(24px), 30px, 700);
+  border-radius: 8px;
+  position: relative;
+  p {
+    position: absolute;
+    bottom: rem(24px);
+    left: rem(24px);
+  }
+}
+
+@each $area, $color, $height in $grid-areas {
+  .competencies__#{$area} {
+    @extend %grid-item;
+    grid-area: $area;
+    height: $height;
+    background: {
+      image: url("../assets/pattern-#{$area}.svg");
+      color: $color;
+    }
+  }
+}
+
+.about-me {
+  text-align: center;
+  margin-inline: rem(16px);
+  margin-bottom: rem(100px);
+}
+
+.profile-pic {
+  display: block;
+  width: rem(300px);
+  height: rem(300px);
+  margin: 0 auto rem(40px);
+}
+
+.about-me__heading {
+  @include setFont(rem(26px), 33px, 700);
+  color: color(black);
+  margin-bottom: em(24px, 26px);
+}
+
+.about-me__paragraph {
+  @include setFont(rem(16px), 26px, 500);
+  color: color(medium-brown);
+  margin-bottom: em(24px, 16px);
+}
+
+.works__heading {
+  @include setFont(rem(24px), 30px, 700);
+  margin-bottom: em(32px, 24px);
+  text-align: center;
+}
+
+.carousel {
+  overflow: hidden;
+  margin-bottom: rem(100px);
+}
+
+.carousel__content {
+  width: 1410px;
+  height: 180px;
+  font-size: 0;
+  margin-bottom: rem(32px);
+  display: flex;
+  gap: rem(15px);
+  img {
+    max-height: 100%;
+    border-radius: 10px;
+  }
+}
+
+.carousel__controls {
+  display: flex;
+  justify-content: center;
+  gap: rem(16px);
+}
+
+.controls__arrow {
+  width: rem(64px);
+  height: rem(64px);
+  background-color: color(black);
+  border-radius: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  img {
+    width: rem(15px);
+    height: rem(16px);
+  }
+}
+
+.call-me {
+  background-color: color(black);
+  color: color(light-cream);
+  margin-inline: rem(16px);
+  border-radius: 10px;
+  padding: rem(48px) rem(24px);
+  text-align: center;
+  margin-bottom: rem(40px);
+}
+
+.call-me__heading {
+  @include setFont(rem(26px), 33px, 700);
+  margin-bottom: em(24px, 26px);
+}
+
+.call-me__paragraph {
+  @include setFont(rem(16px), 26px, 500);
+  margin-bottom: em(24px, 16px);
+}

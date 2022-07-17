@@ -1,45 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles/style.css" />
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Single-page design portfolio</title>
-</head>
-<body>
-
-  Free Consultation
-
-  Design solutions made easy
-
-  With over ten years of experience in various design disciplines, I’m your one-stop shop for your design needs.
-
-  Graphic Design
-  UI/UX
-  Apps
-  Photography
-  Illustrations
-  Motion Graphics
-
-  I’m Amy, and I’d love to work on your next project
-
-  I love working with others to create beautiful design solutions. I’ve designed everything from brand illustrations 
-  to complete mobile apps. I’m also handy with a camera!
-
-  Free Consultation
-
-  My Work
-
-  Book a call with me
-
-  I’d love to have a chat to see how I can help you. The best first step is for us to discuss your project during a 
-  free consultation. Then we can move forward from there.
-
-  Free Consultation
-
-  Free Consultation
-
-</body>
+    <title>Frontend Mentor | Single-page design portfolio</title>
+  </head>
+  <body>
+    <header class="header">
+      <img src="./assets/logo.svg" alt="" class="logo" /><button class="button">
+        Free Consultation
+      </button>
+    </header>
+    <main>
+      <section class="section-top">
+        <h1 class="section-top__heading">Design solutions made easy</h1>
+        <p class="section-top__paragraph">
+          With over ten years of experience in various design disciplines, I’m
+          your one-stop shop for your design needs.
+        </p>
+      </section>
+      <section class="competencies">
+        <div class="competencies__graphic-design"><p>Graphic Design</p></div>
+        <div class="competencies__ui-ux"><p>UI/UX</p></div>
+        <div class="competencies__apps"><p>Apps</p></div>
+        <div class="competencies__photography"><p>Photography</p></div>
+        <div class="competencies__illustrations"><p>Illustrations</p></div>
+        <div class="competencies__motion-graphics"><p>Motion Graphics</p></div>
+      </section>
+      <section class="about-me">
+        <img
+          src="./assets/image-amy.webp"
+          alt="A picture of Amy"
+          class="profile-pic"
+        />
+        <h2 class="about-me__heading">
+          I’m Amy, and I’d love to work on your next project
+        </h2>
+        <p class="about-me__paragraph">
+          I love working with others to create beautiful design solutions. I’ve
+          designed everything from brand illustrations to complete mobile apps.
+          I’m also handy with a camera!
+        </p>
+        <button class="button button--pink">Free Consultation</button>
+      </section>
+      <section class="works">
+        <h2 class="works__heading">My Work</h2>
+        <div class="carousel">
+          <div class="carousel__content">
+            <img src="./assets/image-slide-1.jpg" alt="" />
+            <img src="./assets/image-slide-2.jpg" alt="" />
+            <img src="./assets/image-slide-3.jpg" alt="" />
+            <img src="./assets/image-slide-4.jpg" alt="" />
+            <img src="./assets/image-slide-5.jpg" alt="" />
+          </div>
+          <div class="carousel__controls">
+            <div class="controls__arrow">
+              <img
+                src="./assets/icon-arrow-left.svg"
+                alt="Scroll left"
+                role="button"
+              />
+            </div>
+            <div class="controls__arrow">
+              <img
+                src="./assets/icon-arrow-right.svg"
+                alt="Scroll right"
+                role="button"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="call-me">
+        <h2 class="call-me__heading">Book a call with me</h2>
+        <p class="call-me__paragraph">
+          I’d love to have a chat to see how I can help you. The best first step
+          is for us to discuss your project during a free consultation. Then we
+          can move forward from there.
+        </p>
+        <button class="button button--pink">Free Consultation</button>
+      </section>
+    </main>
+    <footer class="footer">
+      <img src="./assets/logo.svg" alt="" class="logo" /><button class="button">
+        Free Consultation
+      </button>
+    </footer>
+  </body>
 </html>
