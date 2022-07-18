@@ -20,6 +20,11 @@ body {
     padding: 1.8888888889rem 0 3.1111111111rem;
   }
 }
+@media (min-width: 1440px) {
+  body {
+    padding: 1.8888888889rem 0 3.5555555556rem;
+  }
+}
 
 .header,
 .footer {
@@ -34,6 +39,12 @@ body {
     margin-inline: 2.2222222222rem;
   }
 }
+@media (min-width: 1440px) {
+  .header,
+.footer {
+    margin-inline: 9.1666666667rem;
+  }
+}
 
 .header {
   margin-bottom: 1.7777777778rem;
@@ -41,6 +52,11 @@ body {
 @media (min-width: 768px) {
   .header {
     margin-bottom: 3.5555555556rem;
+  }
+}
+@media (min-width: 1440px) {
+  .header {
+    margin-bottom: 3.6666666667rem;
   }
 }
 
@@ -98,6 +114,12 @@ body {
     margin-bottom: 3.5555555556rem;
   }
 }
+@media (min-width: 1440px) {
+  .section-top {
+    margin-inline: 19.1111111111rem;
+    margin-bottom: 4.4444444444rem;
+  }
+}
 
 .section-top__heading {
   font-size: 2rem;
@@ -112,6 +134,14 @@ body {
     line-height: 1.25;
     font-weight: 700;
     margin-bottom: 0.6136363636em;
+  }
+}
+@media (min-width: 1440px) {
+  .section-top__heading {
+    font-size: 3.1111111111rem;
+    line-height: 1.2678571429;
+    font-weight: 700;
+    margin-bottom: 0.4107142857em;
   }
 }
 
@@ -130,6 +160,11 @@ body {
     margin-inline: 3.25rem;
   }
 }
+@media (min-width: 1440px) {
+  .section-top__paragraph {
+    margin-inline: 0.6111111111rem;
+  }
+}
 
 .competencies {
   margin-inline: 0.8888888889rem;
@@ -146,6 +181,12 @@ body {
     grid-template: repeat(3, min-content)/2fr 1fr 1fr;
     grid-template-areas: "graphic-design ui-ux apps" "graphic-design illustrations illustrations" "photography motion-graphics motion-graphics";
     gap: 24px;
+  }
+}
+@media (min-width: 1440px) {
+  .competencies {
+    margin-inline: 9.1666666667rem;
+    margin-bottom: 7.5555555556rem;
   }
 }
 
@@ -225,6 +266,12 @@ body {
     gap: 1.3888888889rem;
   }
 }
+@media (min-width: 1440px) {
+  .about-me {
+    margin: 0 9.1666666667rem 4.8888888889rem;
+    gap: 6.9444444444rem;
+  }
+}
 
 .profile-pic {
   width: 16.6666666667rem;
@@ -235,6 +282,13 @@ body {
     width: 20.2222222222rem;
     height: 20.2222222222rem;
     transform: translateX(-44px);
+  }
+}
+@media (min-width: 1440px) {
+  .profile-pic {
+    width: 24.7222222222rem;
+    height: 24.7222222222rem;
+    transform: none;
   }
 }
 
@@ -249,8 +303,14 @@ body {
   .about-me__heading {
     font-size: 1.7777777778rem;
     line-height: 1.25;
-    font-weight: 700;
     margin-bottom: 0.75em;
+  }
+}
+@media (min-width: 1440px) {
+  .about-me__heading {
+    font-size: 2.2222222222rem;
+    line-height: 1.25;
+    margin-bottom: 0.85em;
   }
 }
 
@@ -265,8 +325,12 @@ body {
   .about-me__paragraph {
     font-size: 1rem;
     line-height: 1.5555555556;
-    font-weight: 500;
     margin-bottom: 1.3333333333em;
+  }
+}
+@media (min-width: 1440px) {
+  .about-me__paragraph {
+    margin-bottom: 1.7777777778em;
   }
 }
 
@@ -276,6 +340,11 @@ body {
 @media (min-width: 768px) {
   .works {
     margin-bottom: 6.6666666667rem;
+  }
+}
+@media (min-width: 1440px) {
+  .works {
+    margin-bottom: 4.8888888889rem;
   }
 }
 
@@ -290,7 +359,6 @@ body {
   .works__heading {
     font-size: 1.7777777778rem;
     line-height: 1.25;
-    font-weight: 700;
     margin-bottom: 1.75em;
   }
 }
@@ -371,12 +439,25 @@ body {
   padding: 2.6666666667rem 1.3333333333rem;
   text-align: center;
   margin-bottom: 2.2222222222rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.3333333333rem;
 }
 @media (min-width: 768px) {
   .call-me {
     margin-inline: 2.1666666667rem;
     padding: 3.1111111111rem 4.1666666667rem 3.5555555556rem;
     margin-bottom: 3.1111111111rem;
+    gap: 1.4444444444rem;
+  }
+}
+@media (min-width: 1440px) {
+  .call-me {
+    margin-inline: 9.1666666667rem;
+    padding: 4.5rem 5.2777777778rem 4.4444444444rem 3.6111111111rem;
+    flex-direction: row;
+    gap: 10.1111111111rem;
+    align-items: center;
   }
 }
 
@@ -390,8 +471,14 @@ body {
   .call-me__heading {
     font-size: 1.7777777778rem;
     line-height: 1.25;
-    font-weight: 700;
     margin-bottom: 0.8125em;
+  }
+}
+@media (min-width: 1440px) {
+  .call-me__heading {
+    font-size: 2.2222222222rem;
+    line-height: 1.25;
+    margin-bottom: 0.625em;
   }
 }
 
@@ -399,14 +486,12 @@ body {
   font-size: 0.8888888889rem;
   line-height: 1.625;
   font-weight: 500;
-  margin-bottom: 1.5em;
 }
 @media (min-width: 768px) {
   .call-me__paragraph {
     font-size: 1rem;
     line-height: 1.5555555556;
     font-weight: 500;
-    margin-bottom: 1.4444444444em;
   }
 }
 

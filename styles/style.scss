@@ -9,6 +9,9 @@ body {
   @media (min-width: $w-tablet) {
     padding: rem(34px) 0 rem(56px);
   }
+  @media (min-width: $w-desktop) {
+    padding: rem(34px) 0 rem(64px);
+  }
 }
 
 .header,
@@ -20,12 +23,18 @@ body {
   @media (min-width: $w-tablet) {
     margin-inline: rem(40px);
   }
+  @media (min-width: $w-desktop) {
+    margin-inline: rem(165px);
+  }
 }
 
 .header {
   margin-bottom: rem(32px);
   @media (min-width: $w-tablet) {
     margin-bottom: rem(64px);
+  }
+  @media (min-width: $w-desktop) {
+    margin-bottom: rem(66px);
   }
 }
 
@@ -74,6 +83,10 @@ body {
     margin-inline: rem(39px);
     margin-bottom: rem(64px);
   }
+  @media (min-width: $w-desktop) {
+    margin-inline: rem(344px);
+    margin-bottom: rem(80px);
+  }
 }
 
 .section-top__heading {
@@ -84,6 +97,10 @@ body {
     @include setFont(rem(44px), 55px, 700);
     margin-bottom: em(27px, 44px);
   }
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(56px), 71px, 700);
+    margin-bottom: em(23px, 56px);
+  }
 }
 
 .section-top__paragraph {
@@ -93,6 +110,9 @@ body {
   @media (min-width: $w-tablet) {
     @include setFont(rem(18px), 28px, 500);
     margin-inline: rem(58.5px);
+  }
+  @media (min-width: $w-desktop) {
+    margin-inline: rem(11px);
   }
 }
 
@@ -117,6 +137,10 @@ body {
       "graphic-design illustrations illustrations"
       "photography motion-graphics motion-graphics";
     gap: 24px;
+  }
+  @media (min-width: $w-desktop) {
+    margin-inline: rem(165px);
+    margin-bottom: rem(136px);
   }
 }
 
@@ -172,6 +196,10 @@ $grid-areas: (
     flex-direction: row;
     gap: rem(25px);
   }
+  @media (min-width: $w-desktop) {
+    margin: 0 rem(165px) rem(88px);
+    gap: rem(125px);
+  }
 }
 
 .profile-pic {
@@ -182,6 +210,11 @@ $grid-areas: (
     height: rem(364px);
     transform: translateX(-44px);
   }
+  @media (min-width: $w-desktop) {
+    width: rem(445px);
+    height: rem(445px);
+    transform: none;
+  }
 }
 
 .about-me__heading {
@@ -189,8 +222,12 @@ $grid-areas: (
   color: color(black);
   margin-bottom: em(24px, 26px);
   @media (min-width: $w-tablet) {
-    @include setFont(rem(32px), 40px, 700);
+    @include setFont(rem(32px), 40px);
     margin-bottom: em(24px, 32px);
+  }
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(40px), 50px);
+    margin-bottom: em(34px, 40px);
   }
 }
 
@@ -199,8 +236,11 @@ $grid-areas: (
   color: color(medium-brown);
   margin-bottom: em(24px, 16px);
   @media (min-width: $w-tablet) {
-    @include setFont(rem(18px), 28px, 500);
+    @include setFont(rem(18px), 28px);
     margin-bottom: em(24px, 18px);
+  }
+  @media (min-width: $w-desktop) {
+    margin-bottom: em(32px, 18px);
   }
 }
 
@@ -209,6 +249,9 @@ $grid-areas: (
   @media (min-width: $w-tablet) {
     margin-bottom: rem(120px);
   }
+  @media (min-width: $w-desktop) {
+    margin-bottom: rem(88px);
+  }
 }
 
 .works__heading {
@@ -216,7 +259,7 @@ $grid-areas: (
   margin-bottom: em(32px, 24px);
   text-align: center;
   @media (min-width: $w-tablet) {
-    @include setFont(rem(32px), 40px, 700);
+    @include setFont(rem(32px), 40px);
     margin-bottom: em(56px, 32px);
   }
 }
@@ -294,10 +337,21 @@ $grid-areas: (
   padding: rem(48px) rem(24px);
   text-align: center;
   margin-bottom: rem(40px);
+  display: flex;
+  flex-direction: column;
+  gap: rem(24px);
   @media (min-width: $w-tablet) {
     margin-inline: rem(39px);
     padding: rem(56px) rem(75px) rem(64px);
     margin-bottom: rem(56px);
+    gap: rem(26px);
+  }
+  @media (min-width: $w-desktop) {
+    margin-inline: rem(165px);
+    padding: rem(81px) rem(95px) rem(80px) rem(65px);
+    flex-direction: row;
+    gap: rem(182px);
+    align-items: center;
   }
 }
 
@@ -305,16 +359,18 @@ $grid-areas: (
   @include setFont(rem(26px), 33px, 700);
   margin-bottom: em(24px, 26px);
   @media (min-width: $w-tablet) {
-    @include setFont(rem(32px), 40px, 700);
+    @include setFont(rem(32px), 40px);
     margin-bottom: em(26px, 32px);
+  }
+  @media (min-width: $w-desktop) {
+    @include setFont(rem(40px), 50px);
+    margin-bottom: em(25px, 40px);
   }
 }
 
 .call-me__paragraph {
   @include setFont(rem(16px), 26px, 500);
-  margin-bottom: em(24px, 16px);
   @media (min-width: $w-tablet) {
     @include setFont(rem(18px), 28px, 500);
-    margin-bottom: em(26px, 18px);
   }
 }

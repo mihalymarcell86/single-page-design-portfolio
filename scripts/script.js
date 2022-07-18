@@ -16,7 +16,7 @@ carousel.addEventListener("scroll", () => {
   const triggerPos = carousel.scrollLeft;
 
   //scrolling left
-  if (triggerPos < 50) {
+  if (triggerPos <= 50) {
     carouselContent.prepend(carouselContent.lastElementChild);
     carousel.scrollTo(triggerPos + scrollStep, 0);
     carousel.scrollTo({
@@ -24,7 +24,7 @@ carousel.addEventListener("scroll", () => {
       behavior: "smooth",
     });
     //scrolling right
-  } else if (triggerPos > scrollLeftMax - 50) {
+  } else if (triggerPos >= scrollLeftMax - 50) {
     carouselContent.append(carouselContent.firstElementChild);
     carousel.scrollTo(triggerPos - scrollStep, 0);
     carousel.scrollTo({
