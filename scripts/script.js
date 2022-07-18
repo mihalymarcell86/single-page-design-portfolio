@@ -1,12 +1,13 @@
 const carousel = document.getElementById("carousel");
 const carouselContent = document.querySelector(".carousel__content");
-const imageWidth = carouselContent.querySelector("img").offsetWidth;
-const gapWidth =
+//TODO: recalculate when resized
+let imageWidth = carouselContent.querySelector("img").offsetWidth;
+let gapWidth =
   (carouselContent.offsetWidth -
     carouselContent.childElementCount * imageWidth) /
   (carouselContent.childElementCount - 1);
-const scrollStep = imageWidth + gapWidth;
-const scrollLeftMax = carouselContent.offsetWidth - window.innerWidth;
+let scrollStep = imageWidth + gapWidth;
+let scrollLeftMax = carouselContent.offsetWidth - window.innerWidth;
 
 //set initial position the the center of content
 carousel.scrollTo(scrollLeftMax / 2, 0);

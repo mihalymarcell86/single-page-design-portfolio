@@ -13,16 +13,11 @@
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
   background-color: #fff7f0;
-  padding: 0.8888888889rem 0 1.7777777778rem;
+  padding: max(0.8888888889rem, 0.0458015267 * 100vw + -0.0653095844rem) 0 max(1.7777777778rem, 0.0610687023 * 100vw + 0.5055131467rem);
 }
 @media (min-width: 768px) {
   body {
-    padding: 1.8888888889rem 0 3.1111111111rem;
-  }
-}
-@media (min-width: 1440px) {
-  body {
-    padding: 1.8888888889rem 0 3.5555555556rem;
+    padding: 1.8888888889rem 0 min(3.5555555556rem, 0.0119047619 * 100vw + 2.6031746032rem);
   }
 }
 
@@ -31,69 +26,45 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-inline: 0.8888888889rem;
+  margin-inline: max(0.8888888889rem, 0.0610687023 * 100vw + -0.3833757422rem);
 }
 @media (min-width: 768px) {
   .header,
 .footer {
-    margin-inline: 2.2222222222rem;
-  }
-}
-@media (min-width: 1440px) {
-  .header,
-.footer {
-    margin-inline: 9.1666666667rem;
+    margin-inline: min(9.1666666667rem, 0.1860119048 * 100vw + -5.7142857143rem);
   }
 }
 
 .header {
-  margin-bottom: 1.7777777778rem;
+  margin-bottom: max(1.7777777778rem, 0.0814249364 * 100vw + 0.0814249364rem);
 }
 @media (min-width: 768px) {
   .header {
-    margin-bottom: 3.5555555556rem;
-  }
-}
-@media (min-width: 1440px) {
-  .header {
-    margin-bottom: 3.6666666667rem;
+    margin-bottom: min(3.6666666667rem, 0.0029761905 * 100vw + 3.4285714286rem);
   }
 }
 
 .logo {
-  width: 2.6666666667rem;
-  height: 2.6666666667rem;
-}
-@media (min-width: 768px) {
-  .logo {
-    width: 3.5555555556rem;
-    height: 3.5555555556rem;
-  }
+  width: clamp(2.6666666667rem, 0.0407124682 * 100vw + 1.818490246rem, 3.5555555556rem);
+  height: clamp(2.6666666667rem, 0.0407124682 * 100vw + 1.818490246rem, 3.5555555556rem);
 }
 
 .button {
-  font-size: 0.7777777778rem;
-  line-height: 2;
+  font-size: clamp(0.7777777778rem, 0.0050890585 * 100vw + 0.6717557252rem, 0.8888888889rem);
+  line-height: 28px;
   font-weight: 700;
   background-color: #030303;
   color: #fff7f0;
-  padding: 0.5714285714em 1.9285714286em;
+  padding: clamp(0.4444444444rem, 0.0152671756 * 100vw + 0.1263782867rem, 0.7777777778rem) clamp(1.5rem, 0.0458015267 * 100vw + 0.5458015267rem, 2.5rem);
   border: 0;
   border-radius: 28px;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  align-self: center;
 }
 .button:hover, .button:focus {
   background-color: #755cde;
   outline: none;
-}
-@media (min-width: 768px) {
-  .button {
-    font-size: 0.8888888889rem;
-    line-height: 1.75;
-    font-weight: 700;
-    padding: 0.875em 2.8125em;
-  }
 }
 
 .button--light-red {
@@ -105,88 +76,62 @@ body {
 
 .section-top {
   text-align: center;
-  margin-inline: 0.8888888889rem;
-  margin-bottom: 1.7777777778rem;
+  margin-inline: max(0.8888888889rem, 0.058524173 * 100vw + -0.3303647159rem);
+  margin-bottom: max(1.7777777778rem, 0.0814249364 * 100vw + 0.0814249364rem);
 }
 @media (min-width: 768px) {
   .section-top {
-    margin-inline: 2.1666666667rem;
-    margin-bottom: 3.5555555556rem;
-  }
-}
-@media (min-width: 1440px) {
-  .section-top {
-    margin-inline: 19.1111111111rem;
-    margin-bottom: 4.4444444444rem;
+    margin-inline: min(19.1111111111rem, 0.4538690476 * 100vw + -17.1984126984rem);
+    margin-bottom: min(4.4444444444rem, 0.0238095238 * 100vw + 2.5396825397rem);
   }
 }
 
 .section-top__heading {
-  font-size: 2rem;
-  line-height: 1.25;
+  font-size: max(2rem, 0.0203562341 * 100vw + 1.5759117897rem);
+  line-height: max(45px, 0.0254452926 * 100vw + 35.4580152672px);
   font-weight: 700;
-  margin-bottom: 0.4444444444em;
+  margin-bottom: max(0.8888888889rem, 0.0279898219 * 100vw + 0.3057675997rem);
   color: #030303;
 }
 @media (min-width: 768px) {
   .section-top__heading {
-    font-size: 2.4444444444rem;
-    line-height: 1.25;
-    font-weight: 700;
-    margin-bottom: 0.6136363636em;
-  }
-}
-@media (min-width: 1440px) {
-  .section-top__heading {
-    font-size: 3.1111111111rem;
-    line-height: 1.2678571429;
-    font-weight: 700;
-    margin-bottom: 0.4107142857em;
+    font-size: min(3.1111111111rem, 0.0178571429 * 100vw + 1.6825396825rem);
+    line-height: min(71px, 0.0238095238 * 100vw + 36.7142857143px);
+    margin-bottom: max(1.2777777778rem, -0.005952381 * 100vw + 1.753968254rem);
   }
 }
 
 .section-top__paragraph {
-  font-size: 0.8888888889rem;
-  line-height: 1.625;
+  font-size: clamp(0.8888888889rem, 0.0050890585 * 100vw + 0.7828668363rem, 1rem);
+  line-height: clamp(26px, 0.0050890585 * 100vw + 24.0916030534px, 28px);
   font-weight: 500;
   color: #7a746e;
-  margin-inline: 1.6111111111rem;
+  margin-inline: max(1.6111111111rem, 0.0750636132 * 100vw + 0.0472858355rem);
 }
 @media (min-width: 768px) {
   .section-top__paragraph {
-    font-size: 1rem;
-    line-height: 1.5555555556;
-    font-weight: 500;
-    margin-inline: 3.25rem;
-  }
-}
-@media (min-width: 1440px) {
-  .section-top__paragraph {
-    margin-inline: 0.6111111111rem;
+    margin-inline: max(11px, -0.0706845238 * 100vw + 6.2658730159rem);
   }
 }
 
 .competencies {
-  margin-inline: 0.8888888889rem;
-  margin-bottom: 5.5555555556rem;
+  margin-inline: max(0.8888888889rem, 0.058524173 * 100vw + -0.3303647159rem);
+  margin-bottom: max(5.5555555556rem, 0.0508905852 * 100vw + 4.4953350297rem);
   display: grid;
   grid-template: repeat(5, min-content)/repeat(2, 1fr);
   grid-template-areas: "graphic-design graphic-design" "ui-ux apps" "illustrations illustrations" "photography photography" "motion-graphics motion-graphics";
-  gap: 25px 24px;
+  gap: 24px;
+}
+@media (min-width: 550px) {
+  .competencies {
+    grid-template: repeat(3, min-content)/2fr 1fr 1fr;
+    grid-template-areas: "graphic-design ui-ux apps" "graphic-design illustrations illustrations" "photography motion-graphics motion-graphics";
+  }
 }
 @media (min-width: 768px) {
   .competencies {
-    margin-inline: 2.1666666667rem;
-    margin-bottom: 6.6666666667rem;
-    grid-template: repeat(3, min-content)/2fr 1fr 1fr;
-    grid-template-areas: "graphic-design ui-ux apps" "graphic-design illustrations illustrations" "photography motion-graphics motion-graphics";
-    gap: 24px;
-  }
-}
-@media (min-width: 1440px) {
-  .competencies {
-    margin-inline: 9.1666666667rem;
-    margin-bottom: 7.5555555556rem;
+    margin-inline: min(9.1666666667rem, 0.1875 * 100vw + -5.8333333333rem);
+    margin-bottom: min(7.5555555556rem, 0.0238095238 * 100vw + 5.6507936508rem);
   }
 }
 
@@ -251,8 +196,8 @@ body {
 
 .about-me {
   text-align: center;
-  margin-inline: 0.8888888889rem;
-  margin-bottom: 5.5555555556rem;
+  margin-inline: max(0.8888888889rem, 0.0610687023 * 100vw + -0.3833757422rem);
+  margin-bottom: max(5.5555555556rem, 0.0508905852 * 100vw + 4.4953350297rem);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,112 +205,79 @@ body {
 }
 @media (min-width: 768px) {
   .about-me {
-    margin: 0 2.2222222222rem 6.6666666667rem 0;
+    margin-left: max(0px, 0.2455357143 * 100vw + -10.4761904762rem);
+    margin-right: max(2.2222222222rem, 0.1860119048 * 100vw + -5.7142857143rem);
+    margin-bottom: min(4.8888888889rem, -0.0476190476 * 100vw + 8.6984126984rem);
     text-align: left;
     flex-direction: row;
-    gap: 1.3888888889rem;
-  }
-}
-@media (min-width: 1440px) {
-  .about-me {
-    margin: 0 9.1666666667rem 4.8888888889rem;
-    gap: 6.9444444444rem;
+    gap: max(1.3888888889rem, 0.1488095238 * 100vw + -4.9603174603rem);
   }
 }
 
 .profile-pic {
-  width: 16.6666666667rem;
-  height: 16.6666666667rem;
+  width: max(16.6666666667rem, 0.1628498728 * 100vw + 13.2739609839rem);
+  height: max(16.6666666667rem, 0.1628498728 * 100vw + 13.2739609839rem);
 }
 @media (min-width: 768px) {
   .profile-pic {
-    width: 20.2222222222rem;
-    height: 20.2222222222rem;
-    transform: translateX(-44px);
+    width: min(24.7222222222rem, 0.1205357143 * 100vw + 15.0793650794rem);
+    height: min(24.7222222222rem, 0.1205357143 * 100vw + 15.0793650794rem);
+    transform: translateX(calc(0.0654761905 * 100vw + -94.2857142857px));
   }
 }
 @media (min-width: 1440px) {
   .profile-pic {
-    width: 24.7222222222rem;
-    height: 24.7222222222rem;
     transform: none;
   }
 }
 
 .about-me__heading {
-  font-size: 1.4444444444rem;
-  line-height: 1.2692307692;
-  font-weight: 700;
+  font-size: max(1.4444444444rem, 0.0152671756 * 100vw + 1.1263782867rem);
+  line-height: max(33px, 0.0178117048 * 100vw + 26.320610687px);
   color: #030303;
-  margin-bottom: 0.9230769231em;
+  margin-bottom: 1.3333333333rem;
 }
 @media (min-width: 768px) {
   .about-me__heading {
-    font-size: 1.7777777778rem;
-    line-height: 1.25;
-    margin-bottom: 0.75em;
-  }
-}
-@media (min-width: 1440px) {
-  .about-me__heading {
-    font-size: 2.2222222222rem;
-    line-height: 1.25;
-    margin-bottom: 0.85em;
+    font-size: min(2.2222222222rem, 0.0119047619 * 100vw + 1.2698412698rem);
+    line-height: min(50px, 0.0148809524 * 100vw + 28.5714285714px);
+    margin-bottom: min(1.8888888889rem, 0.0238095238 * 100vw + 0.3174603175rem);
   }
 }
 
 .about-me__paragraph {
-  font-size: 0.8888888889rem;
-  line-height: 1.625;
+  font-size: clamp(0.8888888889rem, 0.0050890585 * 100vw + 0.7828668363rem, 1rem);
+  line-height: clamp(26px, 0.0050890585 * 100vw + 24.0916030534px, 28px);
   font-weight: 500;
   color: #7a746e;
-  margin-bottom: 1.5em;
+  margin-bottom: 1.3333333333rem;
 }
 @media (min-width: 768px) {
   .about-me__paragraph {
-    font-size: 1rem;
-    line-height: 1.5555555556;
-    margin-bottom: 1.3333333333em;
-  }
-}
-@media (min-width: 1440px) {
-  .about-me__paragraph {
-    margin-bottom: 1.7777777778em;
+    margin-bottom: min(1.7777777778rem, 0.0119047619 * 100vw + 0.8253968254rem);
   }
 }
 
 .works {
-  margin-bottom: 5.5555555556rem;
+  margin-bottom: max(5.5555555556rem, 0.0508905852 * 100vw + 4.4953350297rem);
 }
 @media (min-width: 768px) {
   .works {
-    margin-bottom: 6.6666666667rem;
-  }
-}
-@media (min-width: 1440px) {
-  .works {
-    margin-bottom: 4.8888888889rem;
+    margin-bottom: max(4.8888888889rem, -0.0476190476 * 100vw + 8.6984126984rem);
   }
 }
 
 .works__heading {
-  font-size: 1.3333333333rem;
-  line-height: 1.25;
+  font-size: clamp(1.3333333333rem, 0.0203562341 * 100vw + 0.909245123rem, 1.7777777778rem);
+  line-height: clamp(30px, 0.0254452926 * 100vw + 20.4580152672px, 40px);
   font-weight: 700;
-  margin-bottom: 1.3333333333em;
+  margin-bottom: clamp(1.7777777778rem, 0.0610687023 * 100vw + 0.5055131467rem, 3.1111111111rem);
   text-align: center;
-}
-@media (min-width: 768px) {
-  .works__heading {
-    font-size: 1.7777777778rem;
-    line-height: 1.25;
-    margin-bottom: 1.75em;
-  }
 }
 
 .carousel {
   overflow-x: auto;
-  margin-bottom: 1.7777777778rem;
+  margin-bottom: clamp(1.7777777778rem, 0.0610687023 * 100vw + 0.5055131467rem, 3.1111111111rem);
   scrollbar-width: none;
 }
 .carousel:focus {
@@ -375,31 +287,17 @@ body {
 .carousel::-webkit-scrollbar {
   display: none;
 }
-@media (min-width: 768px) {
-  .carousel {
-    margin-bottom: 3.1111111111rem;
-  }
-}
 
 .carousel__content {
-  height: 180px;
+  height: clamp(180px, 0.4580152672 * 100vw + 8.2442748092px, 360px);
   width: min-content;
   font-size: 0;
   display: flex;
-  gap: 15px;
+  gap: clamp(15px, 0.0381679389 * 100vw + 0.6870229008px, 30px);
 }
 .carousel__content img {
-  width: 270px;
+  width: clamp(270px, 0.6870229008 * 100vw + 12.3664122137px, 540px);
   border-radius: 10px;
-}
-@media (min-width: 768px) {
-  .carousel__content {
-    height: 360px;
-    gap: 30px;
-  }
-  .carousel__content img {
-    width: 540px;
-  }
 }
 
 .carousel__controls {
@@ -434,65 +332,50 @@ body {
 .call-me {
   background-color: #030303;
   color: #fff7f0;
-  margin-inline: 0.8888888889rem;
+  margin-inline: max(0.8888888889rem, 0.058524173 * 100vw + -0.3303647159rem);
   border-radius: 10px;
-  padding: 2.6666666667rem 1.3333333333rem;
+  padding-top: clamp(2.6666666667rem, 0.0203562341 * 100vw + 2.2425784563rem, 3.1111111111rem);
+  padding-inline: clamp(1.3333333333rem, 0.1297709924 * 100vw + -1.3702290076rem, 4.1666666667rem);
+  padding-bottom: clamp(2.6666666667rem, 0.0407124682 * 100vw + 1.818490246rem, 3.5555555556rem);
   text-align: center;
-  margin-bottom: 2.2222222222rem;
+  margin-bottom: clamp(2.2222222222rem, 0.0407124682 * 100vw + 1.3740458015rem, 3.1111111111rem);
   display: flex;
   flex-direction: column;
-  gap: 1.3333333333rem;
+  gap: clamp(1.3333333333rem, 0.0050890585 * 100vw + 1.2273112807rem, 1.4444444444rem);
 }
 @media (min-width: 768px) {
   .call-me {
-    margin-inline: 2.1666666667rem;
-    padding: 3.1111111111rem 4.1666666667rem 3.5555555556rem;
-    margin-bottom: 3.1111111111rem;
-    gap: 1.4444444444rem;
+    margin-inline: min(9.1666666667rem, 0.1875 * 100vw + -5.8333333333rem);
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1300px) {
   .call-me {
-    margin-inline: 9.1666666667rem;
     padding: 4.5rem 5.2777777778rem 4.4444444444rem 3.6111111111rem;
     flex-direction: row;
     gap: 10.1111111111rem;
     align-items: center;
+    text-align: left;
   }
 }
 
 .call-me__heading {
-  font-size: 1.4444444444rem;
-  line-height: 1.2692307692;
+  font-size: max(1.4444444444rem, 0.0152671756 * 100vw + 1.1263782867rem);
+  line-height: max(33px, 0.0178117048 * 100vw + 26.320610687px);
   font-weight: 700;
-  margin-bottom: 0.9230769231em;
+  margin-bottom: max(1.3333333333rem, 0.0050890585 * 100vw + 1.2273112807rem);
 }
 @media (min-width: 768px) {
   .call-me__heading {
-    font-size: 1.7777777778rem;
-    line-height: 1.25;
-    margin-bottom: 0.8125em;
-  }
-}
-@media (min-width: 1440px) {
-  .call-me__heading {
-    font-size: 2.2222222222rem;
-    line-height: 1.25;
-    margin-bottom: 0.625em;
+    font-size: min(2.2222222222rem, 0.0119047619 * 100vw + 1.2698412698rem);
+    line-height: min(50px, 0.0148809524 * 100vw + 28.5714285714px);
+    margin-bottom: max(1.3888888889rem, -0.0014880952 * 100vw + 1.5079365079rem);
   }
 }
 
 .call-me__paragraph {
-  font-size: 0.8888888889rem;
-  line-height: 1.625;
+  font-size: clamp(0.8888888889rem, 0.0050890585 * 100vw + 0.7828668363rem, 1rem);
+  line-height: clamp(26px, 0.0050890585 * 100vw + 24.0916030534px, 28px);
   font-weight: 500;
-}
-@media (min-width: 768px) {
-  .call-me__paragraph {
-    font-size: 1rem;
-    line-height: 1.5555555556;
-    font-weight: 500;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
