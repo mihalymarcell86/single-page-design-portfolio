@@ -6,6 +6,9 @@ body {
   font-family: $font-plus-jakarta;
   background-color: color(light-cream);
   padding: rem(16px) 0 rem(32px);
+  @media (min-width: $w-tablet) {
+    padding: rem(34px) 0 rem(56px);
+  }
 }
 
 .header,
@@ -14,15 +17,25 @@ body {
   align-items: center;
   justify-content: space-between;
   margin-inline: rem(16px);
+  @media (min-width: $w-tablet) {
+    margin-inline: rem(40px);
+  }
 }
 
 .header {
   margin-bottom: rem(32px);
+  @media (min-width: $w-tablet) {
+    margin-bottom: rem(64px);
+  }
 }
 
 .logo {
   width: rem(48px);
   height: rem(48px);
+  @media (min-width: $w-tablet) {
+    width: rem(64px);
+    height: rem(64px);
+  }
 }
 
 .button {
@@ -33,28 +46,54 @@ body {
   border: 0;
   border-radius: 28px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+  &:hover,
+  &:focus {
+    background-color: color(galactic-blue);
+    outline: none;
+  }
+  @media (min-width: $w-tablet) {
+    @include setFont(rem(16px), 28px, 700);
+    padding: em(14px, 16px) em(45px, 16px);
+  }
 }
 
-.button--pink {
-  background-color: color(pink);
+.button--light-red {
+  background-color: color(light-red);
+  &:hover,
+  &:focus {
+    background-color: color(summer-yellow);
+  }
 }
 
 .section-top {
   text-align: center;
   margin-inline: rem(16px);
+  margin-bottom: rem(32px);
+  @media (min-width: $w-tablet) {
+    margin-inline: rem(39px);
+    margin-bottom: rem(64px);
+  }
 }
 
 .section-top__heading {
   @include setFont(rem(36px), 45px, 700);
   margin-bottom: em(16px, 36px);
   color: color(black);
+  @media (min-width: $w-tablet) {
+    @include setFont(rem(44px), 55px, 700);
+    margin-bottom: em(27px, 44px);
+  }
 }
 
 .section-top__paragraph {
   @include setFont(rem(16px), 26px, 500);
-  margin-bottom: em(32px, 16px);
   color: color(medium-brown);
   margin-inline: rem(29px);
+  @media (min-width: $w-tablet) {
+    @include setFont(rem(18px), 28px, 500);
+    margin-inline: rem(58.5px);
+  }
 }
 
 .competencies {
@@ -69,6 +108,16 @@ body {
     "photography photography"
     "motion-graphics motion-graphics";
   gap: 25px 24px;
+  @media (min-width: $w-tablet) {
+    margin-inline: rem(39px);
+    margin-bottom: rem(120px);
+    grid-template: repeat(3, min-content) / 2fr 1fr 1fr;
+    grid-template-areas:
+      "graphic-design ui-ux apps"
+      "graphic-design illustrations illustrations"
+      "photography motion-graphics motion-graphics";
+    gap: 24px;
+  }
 }
 
 $grid-areas: (
@@ -113,48 +162,97 @@ $grid-areas: (
   text-align: center;
   margin-inline: rem(16px);
   margin-bottom: rem(100px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: rem(40px);
+  @media (min-width: $w-tablet) {
+    margin: 0 rem(40px) rem(120px) 0;
+    text-align: left;
+    flex-direction: row;
+    gap: rem(25px);
+  }
 }
 
 .profile-pic {
-  display: block;
   width: rem(300px);
   height: rem(300px);
-  margin: 0 auto rem(40px);
+  @media (min-width: $w-tablet) {
+    width: rem(364px);
+    height: rem(364px);
+    transform: translateX(-44px);
+  }
 }
 
 .about-me__heading {
   @include setFont(rem(26px), 33px, 700);
   color: color(black);
   margin-bottom: em(24px, 26px);
+  @media (min-width: $w-tablet) {
+    @include setFont(rem(32px), 40px, 700);
+    margin-bottom: em(24px, 32px);
+  }
 }
 
 .about-me__paragraph {
   @include setFont(rem(16px), 26px, 500);
   color: color(medium-brown);
   margin-bottom: em(24px, 16px);
+  @media (min-width: $w-tablet) {
+    @include setFont(rem(18px), 28px, 500);
+    margin-bottom: em(24px, 18px);
+  }
+}
+
+.works {
+  margin-bottom: rem(100px);
+  @media (min-width: $w-tablet) {
+    margin-bottom: rem(120px);
+  }
 }
 
 .works__heading {
   @include setFont(rem(24px), 30px, 700);
   margin-bottom: em(32px, 24px);
   text-align: center;
+  @media (min-width: $w-tablet) {
+    @include setFont(rem(32px), 40px, 700);
+    margin-bottom: em(56px, 32px);
+  }
 }
 
 .carousel {
-  overflow: hidden;
-  margin-bottom: rem(100px);
+  overflow-x: auto;
+  margin-bottom: rem(32px);
+  scrollbar-width: none;
+  &:focus {
+    outline: 5px dotted color(galactic-blue);
+    outline-offset: 2px;
+  }
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  @media (min-width: $w-tablet) {
+    margin-bottom: rem(56px);
+  }
 }
 
 .carousel__content {
-  width: 1410px;
   height: 180px;
+  width: min-content;
   font-size: 0;
-  margin-bottom: rem(32px);
   display: flex;
-  gap: rem(15px);
+  gap: 15px;
   img {
-    max-height: 100%;
+    width: 270px;
     border-radius: 10px;
+  }
+  @media (min-width: $w-tablet) {
+    height: 360px;
+    gap: 30px;
+    img {
+      width: 540px;
+    }
   }
 }
 
@@ -173,6 +271,15 @@ $grid-areas: (
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+  &:hover,
+  &:focus {
+    background-color: color(galactic-blue);
+    outline: none;
+  }
+  &:active {
+    background-color: color(black);
+  }
   img {
     width: rem(15px);
     height: rem(16px);
@@ -187,14 +294,27 @@ $grid-areas: (
   padding: rem(48px) rem(24px);
   text-align: center;
   margin-bottom: rem(40px);
+  @media (min-width: $w-tablet) {
+    margin-inline: rem(39px);
+    padding: rem(56px) rem(75px) rem(64px);
+    margin-bottom: rem(56px);
+  }
 }
 
 .call-me__heading {
   @include setFont(rem(26px), 33px, 700);
   margin-bottom: em(24px, 26px);
+  @media (min-width: $w-tablet) {
+    @include setFont(rem(32px), 40px, 700);
+    margin-bottom: em(26px, 32px);
+  }
 }
 
 .call-me__paragraph {
   @include setFont(rem(16px), 26px, 500);
   margin-bottom: em(24px, 16px);
+  @media (min-width: $w-tablet) {
+    @include setFont(rem(18px), 28px, 500);
+    margin-bottom: em(26px, 18px);
+  }
 }

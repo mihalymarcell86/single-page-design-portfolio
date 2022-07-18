@@ -16,6 +16,7 @@
       href="./assets/favicon-32x32.png"
     />
     <link rel="stylesheet" href="styles/style.css" />
+    <script defer src="./scripts/script.js"></script>
 
     <title>Frontend Mentor | Single-page design portfolio</title>
   </head>
@@ -47,19 +48,21 @@
           alt="A picture of Amy"
           class="profile-pic"
         />
-        <h2 class="about-me__heading">
-          I’m Amy, and I’d love to work on your next project
-        </h2>
-        <p class="about-me__paragraph">
-          I love working with others to create beautiful design solutions. I’ve
-          designed everything from brand illustrations to complete mobile apps.
-          I’m also handy with a camera!
-        </p>
-        <button class="button button--pink">Free Consultation</button>
+        <div class="about-me__text">
+          <h2 class="about-me__heading">
+            I’m Amy, and I’d love to work on your next project
+          </h2>
+          <p class="about-me__paragraph">
+            I love working with others to create beautiful design solutions.
+            I’ve designed everything from brand illustrations to complete mobile
+            apps. I’m also handy with a camera!
+          </p>
+          <button class="button button--light-red">Free Consultation</button>
+        </div>
       </section>
       <section class="works">
         <h2 class="works__heading">My Work</h2>
-        <div class="carousel">
+        <div class="carousel" id="carousel">
           <div class="carousel__content">
             <img src="./assets/image-slide-1.jpg" alt="" />
             <img src="./assets/image-slide-2.jpg" alt="" />
@@ -67,21 +70,25 @@
             <img src="./assets/image-slide-4.jpg" alt="" />
             <img src="./assets/image-slide-5.jpg" alt="" />
           </div>
-          <div class="carousel__controls">
-            <div class="controls__arrow">
-              <img
-                src="./assets/icon-arrow-left.svg"
-                alt="Scroll left"
-                role="button"
-              />
-            </div>
-            <div class="controls__arrow">
-              <img
-                src="./assets/icon-arrow-right.svg"
-                alt="Scroll right"
-                role="button"
-              />
-            </div>
+        </div>
+        <div class="carousel__controls">
+          <div
+            class="controls__arrow"
+            id="arrow-left"
+            tabindex="0"
+            role="button"
+            aria-label="Scroll left"
+          >
+            <img src="./assets/icon-arrow-left.svg" alt="" />
+          </div>
+          <div
+            class="controls__arrow"
+            id="arrow-right"
+            tabindex="0"
+            role="button"
+            aria-label="Scroll right"
+          >
+            <img src="./assets/icon-arrow-right.svg" alt="" />
           </div>
         </div>
       </section>
@@ -92,7 +99,7 @@
           is for us to discuss your project during a free consultation. Then we
           can move forward from there.
         </p>
-        <button class="button button--pink">Free Consultation</button>
+        <button class="button button--light-red">Free Consultation</button>
       </section>
     </main>
     <footer class="footer">

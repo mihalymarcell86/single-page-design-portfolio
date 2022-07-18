@@ -15,6 +15,11 @@ body {
   background-color: #fff7f0;
   padding: 0.8888888889rem 0 1.7777777778rem;
 }
+@media (min-width: 768px) {
+  body {
+    padding: 1.8888888889rem 0 3.1111111111rem;
+  }
+}
 
 .header,
 .footer {
@@ -23,14 +28,31 @@ body {
   justify-content: space-between;
   margin-inline: 0.8888888889rem;
 }
+@media (min-width: 768px) {
+  .header,
+.footer {
+    margin-inline: 2.2222222222rem;
+  }
+}
 
 .header {
   margin-bottom: 1.7777777778rem;
+}
+@media (min-width: 768px) {
+  .header {
+    margin-bottom: 3.5555555556rem;
+  }
 }
 
 .logo {
   width: 2.6666666667rem;
   height: 2.6666666667rem;
+}
+@media (min-width: 768px) {
+  .logo {
+    width: 3.5555555556rem;
+    height: 3.5555555556rem;
+  }
 }
 
 .button {
@@ -43,15 +65,38 @@ body {
   border: 0;
   border-radius: 28px;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.button:hover, .button:focus {
+  background-color: #755cde;
+  outline: none;
+}
+@media (min-width: 768px) {
+  .button {
+    font-size: 0.8888888889rem;
+    line-height: 1.75;
+    font-weight: 700;
+    padding: 0.875em 2.8125em;
+  }
 }
 
-.button--pink {
-  background-color: #f39e9e;
+.button--light-red {
+  background-color: #eb7565;
+}
+.button--light-red:hover, .button--light-red:focus {
+  background-color: #f6a560;
 }
 
 .section-top {
   text-align: center;
   margin-inline: 0.8888888889rem;
+  margin-bottom: 1.7777777778rem;
+}
+@media (min-width: 768px) {
+  .section-top {
+    margin-inline: 2.1666666667rem;
+    margin-bottom: 3.5555555556rem;
+  }
 }
 
 .section-top__heading {
@@ -61,14 +106,29 @@ body {
   margin-bottom: 0.4444444444em;
   color: #030303;
 }
+@media (min-width: 768px) {
+  .section-top__heading {
+    font-size: 2.4444444444rem;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 0.6136363636em;
+  }
+}
 
 .section-top__paragraph {
   font-size: 0.8888888889rem;
   line-height: 1.625;
   font-weight: 500;
-  margin-bottom: 2em;
   color: #7a746e;
   margin-inline: 1.6111111111rem;
+}
+@media (min-width: 768px) {
+  .section-top__paragraph {
+    font-size: 1rem;
+    line-height: 1.5555555556;
+    font-weight: 500;
+    margin-inline: 3.25rem;
+  }
 }
 
 .competencies {
@@ -78,6 +138,15 @@ body {
   grid-template: repeat(5, min-content)/repeat(2, 1fr);
   grid-template-areas: "graphic-design graphic-design" "ui-ux apps" "illustrations illustrations" "photography photography" "motion-graphics motion-graphics";
   gap: 25px 24px;
+}
+@media (min-width: 768px) {
+  .competencies {
+    margin-inline: 2.1666666667rem;
+    margin-bottom: 6.6666666667rem;
+    grid-template: repeat(3, min-content)/2fr 1fr 1fr;
+    grid-template-areas: "graphic-design ui-ux apps" "graphic-design illustrations illustrations" "photography motion-graphics motion-graphics";
+    gap: 24px;
+  }
 }
 
 .competencies__motion-graphics, .competencies__photography, .competencies__illustrations, .competencies__apps, .competencies__ui-ux, .competencies__graphic-design {
@@ -143,13 +212,30 @@ body {
   text-align: center;
   margin-inline: 0.8888888889rem;
   margin-bottom: 5.5555555556rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.2222222222rem;
+}
+@media (min-width: 768px) {
+  .about-me {
+    margin: 0 2.2222222222rem 6.6666666667rem 0;
+    text-align: left;
+    flex-direction: row;
+    gap: 1.3888888889rem;
+  }
 }
 
 .profile-pic {
-  display: block;
   width: 16.6666666667rem;
   height: 16.6666666667rem;
-  margin: 0 auto 2.2222222222rem;
+}
+@media (min-width: 768px) {
+  .profile-pic {
+    width: 20.2222222222rem;
+    height: 20.2222222222rem;
+    transform: translateX(-44px);
+  }
 }
 
 .about-me__heading {
@@ -159,6 +245,14 @@ body {
   color: #030303;
   margin-bottom: 0.9230769231em;
 }
+@media (min-width: 768px) {
+  .about-me__heading {
+    font-size: 1.7777777778rem;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 0.75em;
+  }
+}
 
 .about-me__paragraph {
   font-size: 0.8888888889rem;
@@ -166,6 +260,23 @@ body {
   font-weight: 500;
   color: #7a746e;
   margin-bottom: 1.5em;
+}
+@media (min-width: 768px) {
+  .about-me__paragraph {
+    font-size: 1rem;
+    line-height: 1.5555555556;
+    font-weight: 500;
+    margin-bottom: 1.3333333333em;
+  }
+}
+
+.works {
+  margin-bottom: 5.5555555556rem;
+}
+@media (min-width: 768px) {
+  .works {
+    margin-bottom: 6.6666666667rem;
+  }
 }
 
 .works__heading {
@@ -175,23 +286,52 @@ body {
   margin-bottom: 1.3333333333em;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .works__heading {
+    font-size: 1.7777777778rem;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 1.75em;
+  }
+}
 
 .carousel {
-  overflow: hidden;
-  margin-bottom: 5.5555555556rem;
+  overflow-x: auto;
+  margin-bottom: 1.7777777778rem;
+  scrollbar-width: none;
+}
+.carousel:focus {
+  outline: 5px dotted #755cde;
+  outline-offset: 2px;
+}
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+@media (min-width: 768px) {
+  .carousel {
+    margin-bottom: 3.1111111111rem;
+  }
 }
 
 .carousel__content {
-  width: 1410px;
   height: 180px;
+  width: min-content;
   font-size: 0;
-  margin-bottom: 1.7777777778rem;
   display: flex;
-  gap: 0.8333333333rem;
+  gap: 15px;
 }
 .carousel__content img {
-  max-height: 100%;
+  width: 270px;
   border-radius: 10px;
+}
+@media (min-width: 768px) {
+  .carousel__content {
+    height: 360px;
+    gap: 30px;
+  }
+  .carousel__content img {
+    width: 540px;
+  }
 }
 
 .carousel__controls {
@@ -209,6 +349,14 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+.controls__arrow:hover, .controls__arrow:focus {
+  background-color: #755cde;
+  outline: none;
+}
+.controls__arrow:active {
+  background-color: #030303;
 }
 .controls__arrow img {
   width: 0.8333333333rem;
@@ -224,6 +372,13 @@ body {
   text-align: center;
   margin-bottom: 2.2222222222rem;
 }
+@media (min-width: 768px) {
+  .call-me {
+    margin-inline: 2.1666666667rem;
+    padding: 3.1111111111rem 4.1666666667rem 3.5555555556rem;
+    margin-bottom: 3.1111111111rem;
+  }
+}
 
 .call-me__heading {
   font-size: 1.4444444444rem;
@@ -231,12 +386,28 @@ body {
   font-weight: 700;
   margin-bottom: 0.9230769231em;
 }
+@media (min-width: 768px) {
+  .call-me__heading {
+    font-size: 1.7777777778rem;
+    line-height: 1.25;
+    font-weight: 700;
+    margin-bottom: 0.8125em;
+  }
+}
 
 .call-me__paragraph {
   font-size: 0.8888888889rem;
   line-height: 1.625;
   font-weight: 500;
   margin-bottom: 1.5em;
+}
+@media (min-width: 768px) {
+  .call-me__paragraph {
+    font-size: 1rem;
+    line-height: 1.5555555556;
+    font-weight: 500;
+    margin-bottom: 1.4444444444em;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
