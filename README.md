@@ -11,7 +11,6 @@ This is a solution to the [Single-page design portfolio challenge on Frontend Me
 - [My process](#my-process)
   - [Built with](#built-with)
   - [What I learned](#what-i-learned)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 ## Overview
@@ -67,11 +66,6 @@ I had to do some research to find out how to remove a scrollbar from an element 
 I was suprised to learn, that there is no way to acces the `gap` property from JS. Even though it exists as `Element.style.gap`, it doesn't return the actual value.
 
 Another interesting difference in browsers was the `scrollLeftMax` (maximum scroll position) property, which is only known by Firefox.
-
-### Useful resources
-
-- [Example resource 1](https://www.example.com) - This helped me for XYZ reason. I really liked this pattern and will use it going forward.
-- [Example resource 2](https://www.example.com) - This is an amazing article which helped me finally understand XYZ. I'd recommend it to anyone still learning this concept.
 
 ## Author
 
