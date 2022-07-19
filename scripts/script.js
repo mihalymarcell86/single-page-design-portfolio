@@ -1,6 +1,6 @@
 const carousel = document.getElementById("carousel");
 const carouselContent = document.querySelector(".carousel__content");
-//TODO: recalculate when resized
+
 let imageWidth = carouselContent.querySelector("img").offsetWidth;
 let gapWidth =
   (carouselContent.offsetWidth -
@@ -9,44 +9,74 @@ let gapWidth =
 let scrollStep = imageWidth + gapWidth;
 let scrollLeftMax = carouselContent.offsetWidth - window.innerWidth;
 
+//force recalculation of values on resize
+window.addEventListener("resize", () => {
+  imageWidth = carouselContent.querySelector("img").offsetWidth;
+  gapWidth =
+    (carouselContent.offsetWidth -
+      carouselContent.childElementCount * imageWidth) /
+    (carouselContent.childElementCount - 1);
+  scrollStep = imageWidth + gapWidth;
+  scrollLeftMax = carouselContent.offsetWidth - window.innerWidth;
+});
+
 //set initial position the the center of content
 carousel.scrollTo(scrollLeftMax / 2, 0);
 
 //Infinite carousel
-carousel.addEventListener("scroll", () => {
+
+function scrollHandler() {
   const triggerPos = carousel.scrollLeft;
 
   //scrolling left
-  if (triggerPos <= 50) {
+  if (scrollLeftMax / 2 - triggerPos >= scrollStep / 2) {
     carouselContent.prepend(carouselContent.lastElementChild);
     carousel.scrollTo(triggerPos + scrollStep, 0);
-    carousel.scrollTo({
-      left: triggerPos < 50 ? scrollStep - triggerPos : triggerPos,
-      behavior: "smooth",
-    });
-    //scrolling right
-  } else if (triggerPos >= scrollLeftMax - 50) {
+    carousel.scrollTo({ left: scrollLeftMax / 2, behavior: "smooth" });
+  }
+  //scrolling right
+  else if (triggerPos - scrollLeftMax / 2 >= scrollStep / 2) {
     carouselContent.append(carouselContent.firstElementChild);
     carousel.scrollTo(triggerPos - scrollStep, 0);
-    carousel.scrollTo({
-      left:
-        triggerPos > scrollLeftMax - 50
-          ? 2 * scrollLeftMax - (scrollStep + triggerPos)
-          : triggerPos,
-      behavior: "smooth",
-    });
+    carousel.scrollTo({ left: scrollLeftMax / 2, behavior: "smooth" });
   }
-});
+}
+
+carousel.addEventListener("scroll", scrollHandler);
 
 const buttonLeft = document.getElementById("arrow-left");
 const buttonRight = document.getElementById("arrow-right");
 
+//for throttling click events
+let clickEventFired = false;
+
+//scroll event has to be removed while handling the clicks, otherwise they clash
 buttonLeft.addEventListener("click", () => {
-  carousel.scrollBy({ left: -1 * scrollStep, behavior: "smooth" });
+  if (clickEventFired) return null;
+  clickEventFired = true;
+  const triggerPos = carousel.scrollLeft;
+  carousel.removeEventListener("scroll", scrollHandler);
+  carouselContent.prepend(carouselContent.lastElementChild);
+  carousel.scrollTo(Math.round(triggerPos + scrollStep), 0);
+  carousel.scrollTo({ left: scrollLeftMax / 2, behavior: "smooth" });
+  setTimeout(() => {
+    carousel.addEventListener("scroll", scrollHandler);
+    clickEventFired = false;
+  }, 500);
 });
 
 buttonRight.addEventListener("click", () => {
-  carousel.scrollBy({ left: scrollStep, behavior: "smooth" });
+  if (clickEventFired) return null;
+  clickEventFired = true;
+  const triggerPos = carousel.scrollLeft;
+  carousel.removeEventListener("scroll", scrollHandler);
+  carouselContent.append(carouselContent.firstElementChild);
+  carousel.scrollTo(Math.round(triggerPos - scrollStep), 0);
+  carousel.scrollTo({ left: scrollLeftMax / 2, behavior: "smooth" });
+  setTimeout(() => {
+    carousel.addEventListener("scroll", scrollHandler);
+    clickEventFired = false;
+  }, 500);
 });
 
 [buttonLeft, buttonRight].forEach((button) => {
